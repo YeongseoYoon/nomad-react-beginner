@@ -17,8 +17,7 @@ export class MarvelService {
   getCharacterDetail = async (id: string) => {
     const response = await this.httpClient.get(`/v1/public/characters/${id}`);
 
-    const data = (await response.json()) as PaginatedCharacter;
-
-    return data.results[0] as Character;
+    const { results } = (await response.json()).data as PaginatedCharacter;
+    return results[0] as Character;
   };
 }

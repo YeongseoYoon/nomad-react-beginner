@@ -4,11 +4,9 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="p-5">
-      <main className="pt-40 min-h-[calc(100vh-56px)] relative">
-        {children}
-      </main>
-    </div>
+    <main className="px-5 pt-20">
+      <div className="min-h-[calc(100vh-56px)] relative">{children}</div>
+    </main>
   );
 };
 

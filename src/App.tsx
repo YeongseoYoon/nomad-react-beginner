@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom";
 
-import { Layout } from "./components";
+import { Layout, Header } from "./components";
 
 function App() {
   return (
-    <Layout>
-      <Outlet />
-    </Layout>
+    <>
+      <Header />
+      <Layout>
+        <Outlet />
+      </Layout>
+    </>
   );
 }
 
